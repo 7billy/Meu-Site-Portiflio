@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: #121212;
@@ -13,47 +18,53 @@ body {
 	padding: 2rem;
 }
 
-strong {
-	color: #FF66CC;
+/* Container centralizado */
+.container {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 1rem;
 }
 
+/* Espaçamento entre seções */
+.espacamento-secao {
+	margin-bottom: 5rem;
+	/* espaçamento entre as seções principais */
+}
 
-/* Títulos */
+/* Tipografia */
 h2 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 	color: #B5FF3E;
-
-	/* Verde-limão  */
 	border-left: 5px solid #B5FF3E;
 	padding-left: 0.5rem;
+	text-align: center;
+	/* Agora todos os h2 ficam centralizados */
+	border-left: none;
+	/* Remove a borda lateral para ficar como o do Spotify */
 }
 
-/* Título Secundario */
 h3 {
+	font-size: 1.5rem;
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
-/* Parágrafos */
 p {
 	margin-bottom: 1rem;
 	color: #00CCFF;
 	font-size: 1.1rem;
-}
-
-/* Seções */
-section {
-	margin-bottom: 3rem;
-}
-
-#spotify {
-	margin-top: 3rem;
 	text-align: center;
 }
 
-#spotify iframe {
-	border-radius: 8px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+/* Destaques */
+strong {
+	color: #FF66CC;
+}
+
+/* Estrutura */
+section {
+	margin-bottom: 3rem;
 }
 
 /* Foto */
@@ -62,7 +73,11 @@ section {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 1.5rem;
+	text-align: center;
+	width: 100%;
 }
+
+
 
 .perfil-img {
 	width: 180px;
@@ -73,12 +88,21 @@ section {
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-
 /* Badges */
-.badges img {
-	margin: 0.3rem;
+.badges {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1rem;
+	width: 100%;
+	text-align: center;
 }
 
+.badges img {
+	margin: 0.3rem;
+	max-width: 100%;
+	height: auto;
+}
 
 /* Links sociais */
 .social-links {
@@ -88,6 +112,8 @@ section {
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin: 1rem 0;
+	width: 100%;
+	text-align: center;
 }
 
 .social-links a {
@@ -97,7 +123,7 @@ section {
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	font-weight: bold;
-	transition: background 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .social-links a:hover {
@@ -105,43 +131,83 @@ section {
 	transform: scale(1.05);
 }
 
-/* Centralização do parágrafo final */
+/* Contato */
 #contato p {
 	margin-top: 1rem;
 	font-size: 1.1rem;
+	text-align: center;
 }
 
-/* Centralização do Spotify Player */
+/* Spotify */
+#spotify {
+	text-align: center;
+}
+
 .spotify-embed {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 2rem 0;
+	margin-top: 1.5rem;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-	.social-links {
-		justify-content: center;
+.spotify-embed iframe {
+	width: 100%;
+	max-width: 500px;
+	/* largura semelhante ao banner do LinkedIn */
+	height: 352px;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade geral */
+@media (max-width: 1024px) {
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	.perfil-img {
+		width: 140px;
+		height: 140px;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 1rem;
 	}
 
 	h2 {
 		font-size: 1.5rem;
 	}
 
-	.spotify-embed iframe {
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	.perfil-img {
+		width: 120px;
+		height: 120px;
+	}
+
+	p {
+		font-size: 0.95rem;
+	}
+
+	.social-links a {
+		padding: 0.4rem 0.8rem;
+		font-size: 0.9rem;
+	}
+
+	#spotify iframe {
 		width: 90%;
-		height: auto;
-	}
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-	.social-links {
-		justify-content: center;
-	}
-
-	h2 {
-		font-size: 1.5rem;
+		height: 80px;
 	}
 }
