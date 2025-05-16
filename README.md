@@ -1,15 +1,11 @@
 <h1 align="center">🚀 MEU PORTIFÓLIO</h1>
-<p align="center">🌟 Desenvolvedor em formação | Criativo | Apaixonado por Tecnologia</p>
-
-<p align="center">
-  <img src="https://github.com/7billy/Meu-Site-Portiflio/assets/your-image.png" alt="Meu Portfólio" width="600"/>
-</p>
 
 <p align="center">
   <a href="https://7billy.github.io/Meu-Site-Portiflio/" target="_blank">
-    🔗 Acesse meu portfólio completo
+    <img src="assets/your-image.png" alt="Meu Portfólio" width="600"/>
   </a>
 </p>
+
 
 
 ---
