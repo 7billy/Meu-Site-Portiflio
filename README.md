@@ -14,7 +14,7 @@ O portfólio exibe:
 
 ### 📸 Pré-visualizações
 
-![Tela Desxktop/Mobile](/assets/img/your-image.png) 
+![Tela Desxktop/Mobile](/assets/your-image.png) 
 
 ---
 
